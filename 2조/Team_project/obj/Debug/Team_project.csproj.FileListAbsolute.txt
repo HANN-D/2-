@@ -1,0 +1,13 @@
+C:\Users\김민석\source\repos\2조\Team_project\bin\Debug\Team_project.exe.config
+C:\Users\김민석\source\repos\2조\Team_project\bin\Debug\Team_project.exe
+C:\Users\김민석\source\repos\2조\Team_project\bin\Debug\Team_project.pdb
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.csproj.AssemblyReference.cache
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.Form1.resources
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.FormEASY.resources
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.FormHARD.resources
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.FormNORMAL.resources
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.Properties.Resources.resources
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.csproj.GenerateResource.cache
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.csproj.CoreCompileInputs.cache
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.exe
+C:\Users\김민석\source\repos\2조\Team_project\obj\Debug\Team_project.pdb
