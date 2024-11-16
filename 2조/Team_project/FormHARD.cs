@@ -12,13 +12,16 @@ namespace Team_project
 {
     public partial class FormHARD : Form
     {
-        public FormHARD()
+        private Form1 mainForm;
+        public FormHARD(Form1 mainForm)
         {
             InitializeComponent();
+            this.mainForm = mainForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            mainForm.Show();
             this.Close();
         }
     }

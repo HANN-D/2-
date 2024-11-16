@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Team_project
 {
@@ -15,58 +17,45 @@ namespace Team_project
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // 크기 조정 비활성화
+            this.MaximizeBox = false; // 최대화 버튼 비활성화
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         int selectedLEVEL = 0;
-
-        private void EASY_CheckedChanged(object sender, EventArgs e)
-        {
-            selectedLEVEL = 1;
-        }
-
-        private void NORMAL_CheckedChanged(object sender, EventArgs e)
-        {
-            selectedLEVEL = 2;
-        }
-
-        private void HARH_CheckedChanged(object sender, EventArgs e)
-        {
-            selectedLEVEL = 3;
-        }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             Form gameForm = null;
 
-            //난이도 선택에 따라 폼 지정
-            if (selectedLEVEL == 1)
+            // 라디오 버튼 선택에 따라 난이도 결정
+            if (EASY.Checked)
             {
-                gameForm = new FormEASY();
+                gameForm = new FormEASY(this);
             }
-            else if (selectedLEVEL == 2)
+            else if (NORMAL.Checked)
             {
-                gameForm = new FormNORMAL();
+                gameForm = new FormNORMAL(this);
             }
-            else if (selectedLEVEL == 3)
+            else if (HARD.Checked)
             {
-                gameForm = new FormHARD();
+                gameForm = new FormHARD(this);
             }
             else
-                MessageBox.Show("난이도를 정해주세요");
-            // 폼 생성 및 Form1 숨기기, 닫기시  Form1 보여주기
-            if (selectedLEVEL != 0)
             {
-                gameForm.FormClosed += (s, args) => this.Show();
-
-                gameForm.Show();
-
-                this.Hide();
+                MessageBox.Show("난이도를 선택해주세요!", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            // 게임 시작
+            gameForm.FormClosed += (s, args) => this.Show(); // 게임 종료 시 메인 폼 다시 표시
+            gameForm.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // 프로그램 종료
+            Application.Exit();
         }
     }
 }

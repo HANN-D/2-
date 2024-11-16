@@ -35,7 +35,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.EASY = new System.Windows.Forms.RadioButton();
             this.NORMAL = new System.Windows.Forms.RadioButton();
-            this.HARH = new System.Windows.Forms.RadioButton();
+            this.HARD = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // button1
@@ -82,7 +82,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox2.Font = new System.Drawing.Font("휴먼둥근헤드라인", 7.8F, System.Drawing.FontStyle.Underline);
-            this.textBox2.Location = new System.Drawing.Point(12, 11);
+            this.textBox2.Location = new System.Drawing.Point(9, 88);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -94,10 +94,9 @@
             // 
             // EASY
             // 
-            this.EASY.AutoEllipsis = true;
             this.EASY.AutoSize = true;
             this.EASY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.EASY.Cursor = System.Windows.Forms.Cursors.No;
+            this.EASY.Cursor = System.Windows.Forms.Cursors.Default;
             this.EASY.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EASY.Font = new System.Drawing.Font("휴먼둥근헤드라인", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.EASY.Location = new System.Drawing.Point(11, 270);
@@ -108,7 +107,6 @@
             this.EASY.TabStop = true;
             this.EASY.Text = "EASY";
             this.EASY.UseVisualStyleBackColor = false;
-            this.EASY.CheckedChanged += new System.EventHandler(this.EASY_CheckedChanged);
             // 
             // NORMAL
             // 
@@ -124,22 +122,20 @@
             this.NORMAL.TabStop = true;
             this.NORMAL.Text = "NORMAL";
             this.NORMAL.UseVisualStyleBackColor = false;
-            this.NORMAL.CheckedChanged += new System.EventHandler(this.NORMAL_CheckedChanged);
             // 
-            // HARH
+            // HARD
             // 
-            this.HARH.AutoSize = true;
-            this.HARH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.HARH.Font = new System.Drawing.Font("휴먼둥근헤드라인", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.HARH.Location = new System.Drawing.Point(200, 270);
-            this.HARH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HARH.Name = "HARH";
-            this.HARH.Size = new System.Drawing.Size(80, 20);
-            this.HARH.TabIndex = 5;
-            this.HARH.TabStop = true;
-            this.HARH.Text = "HARD";
-            this.HARH.UseVisualStyleBackColor = false;
-            this.HARH.CheckedChanged += new System.EventHandler(this.HARH_CheckedChanged);
+            this.HARD.AutoSize = true;
+            this.HARD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.HARD.Font = new System.Drawing.Font("휴먼둥근헤드라인", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.HARD.Location = new System.Drawing.Point(200, 270);
+            this.HARD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HARD.Name = "HARD";
+            this.HARD.Size = new System.Drawing.Size(80, 20);
+            this.HARD.TabIndex = 5;
+            this.HARD.TabStop = true;
+            this.HARD.Text = "HARD";
+            this.HARD.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -148,7 +144,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(295, 450);
-            this.Controls.Add(this.HARH);
+            this.Controls.Add(this.HARD);
             this.Controls.Add(this.NORMAL);
             this.Controls.Add(this.EASY);
             this.Controls.Add(this.textBox2);
@@ -172,7 +168,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton EASY;
         private System.Windows.Forms.RadioButton NORMAL;
-        private System.Windows.Forms.RadioButton HARH;
+        private System.Windows.Forms.RadioButton HARD;
     }
 }
 
