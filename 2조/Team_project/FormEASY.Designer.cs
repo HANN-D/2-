@@ -50,10 +50,10 @@
             // player
             // 
             this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(350, 312);
+            this.player.Location = new System.Drawing.Point(351, 350);
             this.player.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(101, 132);
+            this.player.Size = new System.Drawing.Size(85, 99);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.player.TabIndex = 5;
             this.player.TabStop = false;
@@ -65,7 +65,7 @@
             this.bullet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bullet.Name = "bullet";
             this.bullet.Size = new System.Drawing.Size(17, 50);
-            this.bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bullet.TabIndex = 4;
             this.bullet.TabStop = false;
             // 
@@ -73,6 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.player);
             this.Controls.Add(this.bullet);
