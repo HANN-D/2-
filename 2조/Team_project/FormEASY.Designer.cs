@@ -38,10 +38,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(713, 12);
+            this.button1.Location = new System.Drawing.Point(624, 10);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
+            this.button1.Size = new System.Drawing.Size(66, 18);
             this.button1.TabIndex = 0;
             this.button1.Text = "H O M E";
             this.button1.UseVisualStyleBackColor = true;
@@ -50,10 +50,10 @@
             // player
             // 
             this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(351, 350);
+            this.player.Location = new System.Drawing.Point(307, 280);
             this.player.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(85, 99);
+            this.player.Size = new System.Drawing.Size(74, 79);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.player.TabIndex = 5;
             this.player.TabStop = false;
@@ -61,24 +61,23 @@
             // bullet
             // 
             this.bullet.Image = ((System.Drawing.Image)(resources.GetObject("bullet.Image")));
-            this.bullet.Location = new System.Drawing.Point(399, 7);
-            this.bullet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bullet.Location = new System.Drawing.Point(349, 6);
             this.bullet.Name = "bullet";
-            this.bullet.Size = new System.Drawing.Size(17, 50);
+            this.bullet.Size = new System.Drawing.Size(15, 40);
             this.bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bullet.TabIndex = 4;
             this.bullet.TabStop = false;
             // 
             // FormEASY
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.player);
             this.Controls.Add(this.bullet);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormEASY";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEASY";

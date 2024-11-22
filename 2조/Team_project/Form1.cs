@@ -21,8 +21,6 @@ namespace Team_project
             this.MaximizeBox = false; // 최대화 버튼 비활성화
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-        int selectedLEVEL = 0;
        
         private void button1_Click(object sender, EventArgs e)
         {

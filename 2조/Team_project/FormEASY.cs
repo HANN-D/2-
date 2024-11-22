@@ -132,21 +132,12 @@ namespace Team_project
             {
                 player.Left += playerSpeed; // 오른쪽 이동
             }
-            else if (keyData == Keys.Up && player.Top > 0)
-            {
-                player.Top -= playerSpeed; // 위로 이동
-            }
-            else if (keyData == Keys.Down && player.Bottom < this.ClientSize.Height)
-            {
-                player.Top += playerSpeed; // 아래로 이동
-            }
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            mainForm.Show(); // 메인 폼 다시 표시
-            this.Close();
+            GameOver(); // GamerOver 호출
         }
     }
 }
