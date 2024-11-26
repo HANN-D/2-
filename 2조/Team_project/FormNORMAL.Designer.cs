@@ -38,10 +38,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(624, 10);
+            this.button1.Location = new System.Drawing.Point(713, 12);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 18);
+            this.button1.Size = new System.Drawing.Size(75, 22);
             this.button1.TabIndex = 1;
             this.button1.Text = "H O M E";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,21 +63,22 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(310, 9);
+            this.label1.Location = new System.Drawing.Point(354, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 70);
+            this.label1.Size = new System.Drawing.Size(80, 88);
             this.label1.TabIndex = 1;
             // 
             // FormNORMAL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormNORMAL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNORMAL";

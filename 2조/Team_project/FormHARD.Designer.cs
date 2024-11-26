@@ -28,61 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHARD));
             this.button1 = new System.Windows.Forms.Button();
-            this.player = new System.Windows.Forms.PictureBox();
-            this.bullet = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bullet)).BeginInit();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.ScoreTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(624, 10);
+            this.button1.Location = new System.Drawing.Point(713, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 18);
+            this.button1.Size = new System.Drawing.Size(75, 22);
             this.button1.TabIndex = 1;
             this.button1.Text = "H O M E";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // player
+            // gameTimer
             // 
-            this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(313, 278);
-            this.player.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(74, 79);
-            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.player.TabIndex = 7;
-            this.player.TabStop = false;
+            this.gameTimer.Enabled = true;
+            this.gameTimer.Interval = 50;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
-            // bullet
+            // ScoreTimer
             // 
-            this.bullet.Image = ((System.Drawing.Image)(resources.GetObject("bullet.Image")));
-            this.bullet.Location = new System.Drawing.Point(355, 4);
-            this.bullet.Name = "bullet";
-            this.bullet.Size = new System.Drawing.Size(15, 40);
-            this.bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bullet.TabIndex = 6;
-            this.bullet.TabStop = false;
+            this.ScoreTimer.Enabled = true;
+            this.ScoreTimer.Interval = 1000;
+            this.ScoreTimer.Tick += new System.EventHandler(this.ScoreTimer_Tick);
             // 
             // FormHARD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 360);
-            this.Controls.Add(this.player);
-            this.Controls.Add(this.bullet);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormHARD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHARD";
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bullet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -90,7 +78,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox player;
-        private System.Windows.Forms.PictureBox bullet;
+        private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Timer ScoreTimer;
     }
 }

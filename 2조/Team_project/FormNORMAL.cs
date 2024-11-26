@@ -8,6 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team_project;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Team_project
@@ -32,6 +33,7 @@ namespace Team_project
             InitializeComponent();
             this.mainForm = mainForm;
 
+            this.DoubleBuffered = true; // 렌더링 최적화
             InitializeGame();
         }
 
@@ -46,6 +48,7 @@ namespace Team_project
             bullets = new List<Bullet>();
             random = new Random();
 
+            gameTimer.Interval = 50; // 50ms (20 FPS)
             this.DoubleBuffered = true; // 화면 깜빡임 방지
 
             // 초기 Bullet 추가
@@ -76,6 +79,12 @@ namespace Team_project
             // 충돌 감지
             foreach (var bullet in bullets)
             {
+                // 대략적인 충돌 검사 (Rectangular Bounds)
+                if (!new Rectangle(playerPosition, playerSize).IntersectsWith(bullet.GetBounds()))
+                {
+                    continue; // 충돌 가능성이 없는 경우 건너뜀
+                }
+
                 if (IsPixelPerfectCollision(playerImage, new Rectangle(playerPosition, playerSize), bullet.Image, bullet.GetBounds()))
                 {
                     GameOver();
@@ -93,7 +102,7 @@ namespace Team_project
             Bitmap bulletImage = new Bitmap(Properties.Resources.bullet);
             bulletImage = new Bitmap(bulletImage, new Size(15, 40)); // 크기 조정
             Point position = new Point(random.Next(0, this.ClientSize.Width - bulletImage.Width), 0); // 랜덤 위치
-            int speed = random.Next(5, 10); // 랜덤 속도
+            int speed = random.Next(10, 15); // 랜덤 속도
 
             bullets.Add(new Bullet(position, bulletImage.Size, speed, bulletImage));
         }
@@ -179,6 +188,8 @@ namespace Team_project
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             const int playerSpeed = 10;
+            // 이전 위치 저장
+            Rectangle oldPlayerBounds = new Rectangle(playerPosition, playerSize);
 
             if (keyData == Keys.Left && playerPosition.X > 0)
             {
@@ -188,6 +199,10 @@ namespace Team_project
             {
                 playerPosition.X += playerSpeed;
             }
+
+            Rectangle newPlayerBounds = new Rectangle(playerPosition, playerSize);
+            this.Invalidate(oldPlayerBounds); // 이전 위치 갱신
+            this.Invalidate(newPlayerBounds); // 새로운 위치 갱신
 
             return base.ProcessCmdKey(ref msg, keyData);
             // 화면 다시 그리기
@@ -206,31 +221,3 @@ namespace Team_project
 }
 
 
-// Bullet 클래스
-public class Bullet
-{
-    public Point Position { get; set; }
-    public Size Size { get; set; }
-    public int Speed { get; set; }
-    public Bitmap Image { get; set; }
-
-    public Bullet(Point position, Size size, int speed, Bitmap image)
-    {
-        Position = position;
-        Size = size;
-        Speed = speed;
-        Image = image;
-    }
-
-    // Bullet 움직임
-    public void Move()
-    {
-        Position = new Point(Position.X, Position.Y + Speed);
-    }
-
-    // 충돌 영역 반환
-    public Rectangle GetBounds()
-    {
-        return new Rectangle(Position, Size);
-    }
-}
