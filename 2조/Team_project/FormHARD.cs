@@ -82,7 +82,7 @@ namespace Team_project
                     i--;
                 }
             }
-            if (random.Next(0, 10) < 2) // 약 20% 확률로 생성
+            if (random.Next(0, 10) < 4) // 약 40% 확률로 생성
             {
                 AddBullet();
             }
